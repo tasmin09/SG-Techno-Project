@@ -1,0 +1,78 @@
+@import "../../styles/functions";
+
+.blogPostContainer {
+  width: 85%;
+  padding: clamp-value(20, 60);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: clamp-value(10, 25);
+  color: #1f2b64;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+
+    & > figure > img {
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  > figure > img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  > .detailsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    > div.authorDetails {
+      padding: 0 clamp-value(10, 30);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: clamp-value(10, 25);
+
+      > p {
+        width: max-content;
+        font-size: font-size(16, 24);
+      }
+
+      > figure > img {
+        border-radius: 50%;
+      }
+    }
+
+    > article {
+      margin: clamp-value(10, 20) 0;
+
+      > h2 {
+        font-size: font-size(20, 32);
+        font-weight: 600;
+      }
+
+      > p {
+        font-size: font-size(16, 22);
+        font-weight: 400;
+        margin: clamp-value(10, 30) 0;
+
+        > a {
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

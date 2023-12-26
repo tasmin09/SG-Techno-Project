@@ -1,0 +1,14 @@
+@function font-size($min, $max, $viewport-width: 1920) {
+  $result: $max / $viewport-width * 100;
+  @return clamp(#{$min}px, #{$result}vw, #{$max}px);
+}
+
+@function clamp-value($min, $max, $viewport: vw, $viewport-width: 1920) {
+  $middle: ($min + $max) / 2;
+  $middle-in-vw: ($middle / $viewport-width) * 100;
+  @return clamp(#{$min}px, #{$middle-in-vw}#{$viewport}, #{$max}px);
+}
+
+
+
+

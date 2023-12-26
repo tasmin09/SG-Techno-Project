@@ -1,0 +1,257 @@
+@import "../../styles/functions";
+
+.nav_wrapper {
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.main_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp-value(10, 20);
+}
+
+.logotext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    width: clamp-value(130, 170);
+  }
+}
+
+.nav_list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3vw;
+  margin: auto;
+}
+
+.nav_list > div {
+  font-weight: 1000;
+  font-size: 0.85vw;
+}
+
+.options_link {
+  color: #8c8c8c;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.active {
+  color: #1f2b64;
+}
+
+.contactUsBtn {
+  font-weight: 600;
+  font-size: font-size(12, 16);
+  padding: clamp-value(8, 12) clamp-value(12, 20);
+  border-radius: 30px;
+  color: #1677ff;
+  border: 1px solid #1677ff;
+  background: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: rgba(243, 239, 239, 0.9);
+}
+
+.modal {
+  background-color: white;
+  position: relative;
+  width: 300px;
+  padding: 10px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 10px lightgray;
+
+  > .modalHeader {
+    border-bottom: 1px solid gray;
+    padding: 10px;
+  }
+
+  > .modalContent {
+    padding: 10px;
+
+    > form {
+      > .inputField {
+        width: 100%;
+        max-width: 274px;
+        padding: 5px;
+        margin: 5px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5px;
+        user-select: none;
+
+        > label {
+          font-size: 14px;
+          font-weight: 600;
+          color: gray;
+        }
+
+        > input,
+        textarea {
+          width: 100%;
+          padding: 5px 8px;
+          font-size: 14px;
+          min-height: 35px;
+        }
+      }
+
+      > .modalSendBtn {
+        display: block;
+        margin: auto;
+        border: none;
+        outline: none;
+        background: linear-gradient(146.65deg, #2077ff -10.07%, #1f3d77 76.39%);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        border: 1px solid white;
+        cursor: pointer;
+
+        &:hover {
+          color: #1677ff;
+          border-color: #1677ff;
+          background: white;
+        }
+      }
+    }
+  }
+
+  > span.closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 22px;
+    width: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      border-radius: 50%;
+      background-color: red;
+      color: white;
+      z-index: 999;
+    }
+  }
+}
+
+.mobileNavWrapper {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  border-bottom: 1px solid gray;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+
+  > .hamburgerIcon {
+    > img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+
+  > .navLinksContainer {
+    position: absolute;
+    top: 20px;
+    left: -1000px;
+    width: 350px;
+    // height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: clamp-value(10, 25);
+    box-shadow: 1px 1px 10px 0 lightgray;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: white;
+    padding: clamp-value(20, 35) 0;
+    transition: ease-in-out 1s all;
+
+    > .closeNavBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-size: 16px;
+      font-weight: 700;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    > div {
+      width: clamp-value(180, 300);
+      margin: 0 clamp-value(20, 35);
+
+      > a {
+        display: block;
+        padding: clamp-value(10, 25);
+        font-size: font-size(14, 18);
+        font-weight: 600;
+        cursor: pointer;
+        text-align: left;
+      }
+    }
+
+    > .contact_btn {
+      margin-top: clamp-value(20, 30);
+      > button {
+        font-size: font-size(14, 18);
+        font-weight: 600;
+        width: 180px !important;
+      }
+    }
+  }
+}
