@@ -1,0 +1,105 @@
+.whyTechnofabSectionContainer {
+    padding:8rem 10rem;
+    height: 100vh;
+    .headingContainer{
+                margin-bottom: 1rem;
+                >p{
+                    font-size: 2.8rem;
+                    font-weight: 500;
+                    color: #1f2b64;
+                    >span{
+                        font-weight: 600;
+                    }
+                }
+            }        
+  
+  
+    > .uspContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > .uspSlider {
+        width: 600px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .whyTechnofabSectionContainer {
+      padding: 5rem 2rem;
+      margin-bottom: 10rem;
+      .headingContainer {
+        > p {
+          font-size: 2rem;
+        }
+      }
+      > .uspContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .arrow {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          > img {
+            width: 50px;
+          }
+        }
+        .uspSlider {
+          width: 100%;
+          overflow-x: scroll;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          white-space: nowrap;
+          .uspImgContainer {
+            scroll-snap-align: center;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .uspImg {
+              max-width: 400px;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+@media screen and (max-width: 400px) {
+  .uspImgContainer {
+    scroll-snap-align: center;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .uspImg {
+      width: 300px;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .uspImgContainer {
+    scroll-snap-align: center;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .uspImg {
+      width: 240px;
+      height: 100%;
+    }
+  }
+}

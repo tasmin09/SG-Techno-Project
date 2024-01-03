@@ -2,7 +2,6 @@
 
 
 // HERO SECTION
-
 .heroSectionContainer {
   width: 100vw;
   height: 100vh !important;
@@ -14,24 +13,25 @@
     display: flex;
     margin-top: 8rem;
   }
-
   .workerImg1{
     position: relative;
     bottom: 8rem;
     right: 10rem;
   }
-
   .welcomeText p{
     font-size: 1.1rem !important;
     line-height: 1.8rem !important;
   }
-
+  
   .contactUsBtn{
     margin-top: 2rem;
     padding: 1.6rem 3.2rem !important;
     font-size: 1.8rem!important;
     border-radius:3rem !important ;
   }
+
+
+  
 
   @media screen and (min-width: 1200px) and (max-width: 1370px) {
     justify-content: center;
@@ -72,6 +72,14 @@
         width: clamp-value(110, 280);
       }
     }
+
+    .missionTextContainer {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      background-color: red!important;
+    }
+
 
     .blendingImg {
       margin: 10vh 0 0;
@@ -286,10 +294,9 @@
       padding-bottom: 100px !important;
 
       > div > img {
-      
         padding: 30px 0 0 20px;
         height: auto;
-        width: 350px;
+        width: 350px; 
       }
 
       > div:has(> article) {
@@ -318,6 +325,7 @@
 
         @media screen and (min-width: 1400px) {
           top: 21dvh;
+         
         }
       }
     }
@@ -426,156 +434,7 @@
 
 // WHY TECHNOFAB SECTION
 
-.whyTechnofabSectionContainer {
-  padding: 2% 0;
-  width: 100%;
 
-  @media screen and (max-width: 425px) {
-    padding: 10% 0;
-  }
-
-  > div:has(> p) {
-    // height: 100vh;
-    padding-bottom: 10rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-
-    > p {
-      padding: 0 0 20rem;
-      padding-left: 10%;
-      margin-top: 4% !important;
-      color: #1f2b64 !important;
-      width: 100%;
-      font-size: 11.5dvw;
-
-      @media screen and (max-width: 400px) {
-        padding-bottom: 0 !important;
-      }
-    }
-  }
-
-  > .uspContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-    z-index: 999 !important;
-
-    @media screen and (min-width: 426px) and (max-width: 768px) {
-      > .uspSlider {
-        width: 60vw !important;
-        overflow-y: hidden;
-
-        > figure {
-          height: 460px !important;
-          width: 460px !important;
-
-          > img {
-            width: 460px !important;
-            height: 460px !important;
-          }
-        }
-      }
-    }
-
-    @media screen and (min-width: 321px) and (max-width: 425px) {
-      > figure:first-child {
-        > img {
-          width: 10vw;
-          height: 10vh;
-        }
-      }
-
-      > figure:nth-child(3) {
-        > img {
-          width: 10vw;
-          height: 10vh;
-        }
-      }
-
-      > .uspSlider {
-        width: 260px !important;
-        height: max-content !important;
-        overflow-y: hidden;
-
-        > figure {
-          height: 260px !important;
-          width: 260px !important;
-
-          > img {
-            width: 260px !important;
-            height: 260px !important;
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 320px) {
-      > figure:first-child {
-        > img {
-          width: 30px;
-          height: 10vh;
-        }
-      }
-
-      > figure:nth-child(3) {
-        > img {
-          width: 30px;
-          height: 10vh;
-        }
-      }
-
-      > .uspSlider {
-        width: 240px !important;
-        height: max-content !important;
-        overflow-y: hidden;
-
-        > figure {
-          height: 240px !important;
-          width: 240px !important;
-
-          > img {
-            width: 240px !important;
-            height: 240px !important;
-          }
-        }
-      }
-    }
-
-    > figure:first-child {
-      > img {
-        rotate: 180deg;
-      }
-    }
-
-    > figure:nth-child(3) {
-      > img {
-        cursor: pointer;
-        z-index: 999;
-      }
-    }
-
-    > .uspSlider {
-      width: 600px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      overflow-x: auto;
-      z-index: 1;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-
-      > figure {
-        width: 600px !important;
-        // border: 1px solid red;
-        transition: all 2s ease-in;
-        z-index: 9999;
-      }
-    }
-  }
-}
 
 //  PROJECTS SECTION
 
@@ -692,118 +551,6 @@
     }
   }
 }
-
-// FEEDBACK SECTION
-
-.feedbackSectionContainer {
-  position: relative;
-  height: 90vh;
-  width: 100vw;
-  margin: 4% 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  overflow-y: hidden;
-
-  @media screen and (min-width: 426px) and (max-width: 768px) {
-    padding: clamp-value(20, 40) 0 !important;
-    height: max-content !important;
-    height: 500px !important;
-    margin: 0;
-    background-image: none !important;
-
-    > img {
-      display: none;
-    }
-
-    & > section.feedback {
-      width: 90% !important;
-    }
-  }
-
-  @media screen and (max-width: 425px) {
-    padding: clamp-value(20, 40) 0 !important;
-    height: 500px !important;
-    margin: 5vh 0 10vh;
-    background-image: none !important;
-
-    > img {
-      display: none;
-    }
-
-    & > section.feedback {
-      width: 95% !important;
-
-      > div {
-        width: 90% !important;
-        margin-left: 0 !important;
-      }
-    }
-  }
-
-  > img {
-    width: 55%;
-    height: 100%;
-    z-index: -1;
-    position: absolute !important;
-    top: 20vh;
-    right: 0;
-  }
-
-  > section.feedback {
-    position: relative;
-    width: 50%;
-    min-height: 360px;
-    height: 40vh;
-    background: linear-gradient(133.41deg, #2c5ea5 -13.41%, #1f2b64 120.53%);
-    border-radius: 0 30px 30px 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    > .dbcomma1 {
-      position: absolute;
-      top: -85px;
-      left: 10%;
-    }
-
-    > div {
-      width: 70%;
-      margin-left: 5%;
-
-      > article {
-        margin-top: 20px;
-        width: 90%;
-
-        > p {
-          font-size: font-size(14, 20);
-          font-weight: 400;
-          line-height: clamp-value(20, 32);
-          margin-bottom: 10px;
-        }
-      }
-
-      > .projectName {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: clamp-value(10, 30);
-
-        > p {
-          font-size: font-size(12, 16);
-
-          > b {
-            font-weight: 500;
-          }
-        }
-      }
-    }
-  }
-}
-
 // AUTHORISED SUPPLIER SECTION
 
 .authorised {

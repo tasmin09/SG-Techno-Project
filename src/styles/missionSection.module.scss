@@ -1,0 +1,197 @@
+.missionSectionContainer{
+    margin-top: 5rem;
+    width: 100%;
+    height: 100vh;
+    .blueBackground{
+        background: linear-gradient(182.07deg, #2c5ca3 -14.42%, #1c3770 107.18%);
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        .missionHeading{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            margin-top: 3rem;
+            padding-left: 10rem;
+            width: 100%;
+
+            >h2{
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-size: 9rem;
+                font-weight: 500;
+
+            }
+        }
+        .missionContent{
+            display: flex;
+            margin-top: 5rem;
+            padding: 0 10rem;
+            justify-content: space-between;
+            gap: 5rem;
+            .missionContentRight{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5rem;
+                >p{
+                    color: white;
+                    font-size: 1rem;
+                    margin: 0;
+                    line-height: 2rem;
+                    padding: 0;
+                }
+            }
+            .doubleComma{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .missionSectionContainer{
+        .blueBackground{
+            height: 80vh;
+            .missionHeading{
+                margin-top: 0;
+                padding-left: 0;
+                >h2{
+                    font-size: 6rem;
+                }
+            }
+            .missionContent{
+                .missionContentRight{
+                >p{
+                    font-size: .8rem;
+                }
+            }
+                .missionImg{
+                    width: 100%;
+                    height: 50vh;
+                }
+                .doubleComma{
+                    width: 30vh;
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .missionSectionContainer{
+        .blueBackground{
+            height: 100%;
+            margin: auto;
+            .missionHeading{
+                margin-top: 0;
+                padding-left: 0;
+                >h2{
+                    font-size: 4rem;
+                }
+            }
+            .missionContent{
+                flex-direction: column;
+                 padding: 0 2rem;
+                //justify-content: center;
+                 gap: 1rem;
+                height: 100%; 
+                .missionImg{
+                    width: 100%;
+                    height: 50vh;
+                }
+                .missionContentRight{
+                    width: 100%;
+                    background: #24407c;
+                    border-radius: 1rem;
+                    position: relative;
+                    top: -5rem;
+                    padding: 1rem;
+                    height: auto;
+                    >p{
+                        font-size: .8rem;
+                        line-height: 1.2rem;
+                    }
+                }
+                .doubleComma{
+                    width: 10vh;
+                    height: 10vh;
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 450px){
+    .missionSectionContainer{
+        margin-bottom: 10rem;
+    .missionContent{
+        flex-direction: column;
+         padding: 0 2rem;
+        //justify-content: center;
+         gap: 1rem;
+        height: 100%; 
+        .missionImg{
+            width: 100%;
+            height: 50vh;
+        }
+        .missionContentRight{
+            width: 100%;
+            background: #24407c;
+            border-radius: 1rem;
+            position: relative;
+            top: -5rem;
+            padding: 1rem;
+            height: auto;
+            >p{
+                font-size: .8rem;
+                line-height: 1.2rem;
+            }
+        }
+        .doubleComma{
+            width: 7vh;
+            height: 7vh;
+            display: flex;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 300px){
+    .missionSectionContainer{
+        margin-bottom: 15rem;
+    .missionContent{
+        flex-direction: column;
+         padding: 0 2rem;
+         gap: 1rem;
+        height: 100%; 
+        .missionImg{
+            width: 100%;
+            height: 50vh;
+        }
+        .missionContentRight{
+            width: 100%;
+            background: #24407c;
+            border-radius: 1rem;
+            position: relative;
+            top: -5rem;
+            padding: 1rem;
+            height: auto;
+            >p{
+                font-size: .4rem;
+                line-height: 1rem;
+            }
+        }
+        .doubleComma{
+            width: 3vh;
+            height: 3vh;
+            display: flex;
+        }
+    }
+}
+}

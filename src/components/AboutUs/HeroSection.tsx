@@ -9,8 +9,7 @@ import workerImg2 from "../../assets/images/worker-img-2.jpg";
 import workerImg3 from "../../assets/images/worker-img-3.jpg";
 import Image from "next/image";
 import ContactUsModal from "../NavigationBar/ContactUsModal";
-
-
+import { motion } from "framer-motion";
 
 const HeroSection = ({ sectionRef }: { sectionRef: any }) => {
   const [open, setOpen] = useState(false);
@@ -19,14 +18,21 @@ const HeroSection = ({ sectionRef }: { sectionRef: any }) => {
     setOpen(true);
   };
 
+  
+
   return (
-    <>
+    <motion.div 
+    initial={{ opacity: 0 }}
+     animate={{ opacity: 3 }}
+      transition={{ duration: 3 }}
+     >
       <section
         className={`${styles.heroSectionContainer} heroSection`}
         ref={sectionRef}
       >
-        <div className="leftSection" >
-          <div className={styles.banner_img}>
+        <div className="leftSection">
+          <div
+           className={styles.banner_img}>
             <Image src={blendingImg} alt="blending" width={700} height={300} />
             <Image
               src={workerImg1}
@@ -37,8 +43,9 @@ const HeroSection = ({ sectionRef }: { sectionRef: any }) => {
             />
           </div>
 
-          <div>
-        
+          <div
+            className={styles.welcomeTextContainer}
+          >
             <article className={styles.welcomeText}>
               <p>
                 Welcome to <b>SG Technofab</b>, we are dedicated to providing
@@ -66,6 +73,13 @@ const HeroSection = ({ sectionRef }: { sectionRef: any }) => {
         </div>
 
         <div className="rightSection">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+            className={styles.line}
+            style={{marginRight: "1rem"}}
+          >
           <Image
             src={workerImg2}
             alt="worker-img-2"
@@ -74,6 +88,7 @@ const HeroSection = ({ sectionRef }: { sectionRef: any }) => {
             className="worker-img-2"
             id={styles.lineUp}
           />
+          </motion.span>
           <Image
             src={workerImg3}
             alt="worker-img-3"
@@ -116,7 +131,7 @@ const HeroSection = ({ sectionRef }: { sectionRef: any }) => {
         </button>
       </section>
       <ContactUsModal open={open} setOpen={setOpen} />
-    </>
+    </motion.div>
   );
 };
 
